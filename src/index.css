@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+
+  --color-base: #131313;
+  --color-surface-lowest: #0e0e0e;
+  --color-surface-low: #1b1b1b;
+  --color-surface-high: #2a2a2a;
+  --color-surface-highest: #353535;
+  --color-surface-bright: #393939;
+
+  --color-primary: #ffaaf4;
+  --color-on-primary: #5b005b;
+  --color-secondary-container: #60377b;
+  --color-on-secondary-fixed: #2e0249;
+
+  --color-outline: #9c8c97;
+  --color-outline-variant: #50434d;
+
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #d4c1ce;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* Glassmorphism utility */
+@utility glass-panel {
+  background-color: color-mix(in srgb, var(--color-surface-bright) 10%, transparent);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
